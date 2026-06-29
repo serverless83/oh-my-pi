@@ -187,6 +187,7 @@ COPY . /pi/
 # Regenerate the docs index that `--ignore-scripts` skipped above. The root
 # package.json's `prepare` script normally handles this on a vanilla install.
 RUN bun --cwd=packages/coding-agent run gen:docs
+RUN bun --cwd=packages/collab-web run gen:tool-views
 
 ENTRYPOINT ["/usr/bin/tini", "--", "/usr/local/bin/omp"]
 CMD ["--help"]
