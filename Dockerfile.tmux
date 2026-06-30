@@ -8,7 +8,7 @@ RUN printf '%s\n' \
     'set -euo pipefail' \
     '' \
     'if ! tmux has-session -t omp 2>/dev/null; then' \
-    '  tmux new-session -d -s omp "/usr/local/bin/omp${@:+ $@}"' \
+    '  tmux new-session -d -s omp "/usr/local/bin/omp"' \
     '  echo "=== omp avviato in tmux ==="' \
     '  echo "Apri una shell e fai: tmux attach -t omp"' \
     'fi' \
